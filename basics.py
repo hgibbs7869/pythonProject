@@ -1,12 +1,3 @@
-From DWC Instructor to Everyone 07:45 PM
-https://www.youtube.com/watch?v=4VKVGybyElM
-From DWC Instructor to Everyone 07:51 PM
-https://www.youtube.com/watch?v=Lv0xcdeXaGU
-From DWC Instructor to Everyone 08:16 PM
-https://www.youtube.com/watch?v=ZZPiWZpdekA&list=PLgJhDSE2ZLxaY_DigHeiIDC1cD09rXgJv&index=15
-From Alexis Tulloch to Everyone 09:01 PM
-https://github.com/AlexisDesirae?tab=repositories
-From DWC Instructor to Everyone 09:17 PM
 from basics import mean, variance, covariance
 
 def fit_single_linear_regression(x: list, y: list) -> dict:
@@ -41,10 +32,16 @@ def error(list,y):
     y_errors = [i - y for i in list]
     return y_errors
 
-def variance (list):
-    data_mean = mean(list)
-    sum_of_squares = sum((i-data_mean)**2 for i in list)
+def variance(data: list) -> float:
+    """
+    Calculates the variance of a list of numeric values
+    :param data: list of numeric values
+    :return: float
+    """
+    data_mean = mean(data)
+    sum_of_squares = sum((i - data_mean)**2 for i in data)
     return sum_of_squares
+
 
 def std_dev (list, deg_of_freedom=1):
     sum_of_sqaures = variance(list)
